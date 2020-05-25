@@ -54,10 +54,11 @@ private:
 		int parent = (index-1) / 2;
 
 		if (this->arr[index].key > this->arr[parent].key)
-			swap(this->arr[index], this->arr[parent]);
-
-		shiftUp(parent);
-
+		{
+		   swap(this->arr[index], this->arr[parent]);
+		   shiftUp(parent);
+		}
+	        return;
 	}
 
 	void shiftDown(int index)
